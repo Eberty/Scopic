@@ -1,0 +1,20 @@
+# Visual studio
+*.code-workspace
+.vscode/*
+.vs/*
+out/*
+*.json
+
+# Compiled libraries and executables
+*.exe
+*.out
+*.app
+*.a
+*.lib
+*.so
+*.dll
+
+# Folders
+build/*
+install/*
+log/*
