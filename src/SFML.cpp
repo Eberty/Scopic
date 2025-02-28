@@ -263,7 +263,8 @@ bool handleEvents(sf::RenderWindow& _window, sf::Event& _event, const BoundingBo
     }
     else if (_event.type == sf::Event::MouseButtonPressed)
     {
-        printMouseClickCoordinate(_window, _event.mouseButton);
+        // Used to debug the coordinates
+        // printMouseClickCoordinate(_window, _event.mouseButton);
     }
 
     return false;
