@@ -41,17 +41,22 @@ include_directories(include)
 file(GLOB_RECURSE SOURCES "src/*.c*")
 file(GLOB_RECURSE HEADERS "include/*.h*")
 
-add_executable(scopic_test_task ${SOURCES} ${HEADERS})
+list(REMOVE_ITEM SOURCES "src/main.cpp")
+
+add_library(scopic_test_task_lib ${SOURCES} ${HEADERS})
+
+add_executable(scopic_test_task src/main.cpp)
+target_link_libraries(scopic_test_task scopic_test_task_lib)
 
 if(TARGET sfml-graphics)
     message(STATUS "SFML was found and is available")
-    target_compile_definitions(scopic_test_task PRIVATE SFML_AVAILABLE)
-    target_link_libraries(scopic_test_task sfml-graphics)
+    target_compile_definitions(scopic_test_task_lib PUBLIC SFML_AVAILABLE)
+    target_link_libraries(scopic_test_task_lib sfml-graphics)
 else()
     message(STATUS "SFML was not found")
 endif()
 
-if(EXISTS "tests/CMakeLists.txt")
+if(EXISTS "${CMAKE_SOURCE_DIR}/tests/CMakeLists.txt")
     message(STATUS "Tests are enabled")
     enable_testing()
     add_subdirectory(tests)
