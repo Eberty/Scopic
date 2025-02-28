@@ -16,13 +16,9 @@ This project implements a test task for a **2D/3D Geometry Algorithm Developer p
 
 &nbsp;
 
-## **Dependencies**
+## **Install Dependencies**
 
-For visualization, the project uses [SFML](https://www.sfml-dev.org/), which is automatically fetched during the CMake configuration process, this may take a while.
-
-On Windows, there are no additional dependencies to install manually, as the package includes all the necessary libraries. Just ensure that you have CMake and a C++ compiler installed on your system.
-
-On , install SFML's dependencies using your system package manager: `sudo apt update && sudo apt install libxrandr-dev  libxcursor-dev libudev-dev  libfreetype-dev libgl1-mesa-dev libegl1-mesa-dev`.
+There are no additional dependencies to install manually, as the package includes all the necessary libraries. Just ensure that you have CMake and a C++ compiler installed on your system. For visualization, the project uses [SFML](https://www.sfml-dev.org/), which is automatically fetched during the CMake configuration process, this may take a while.
 
 ## **Building and Running the Project**
 
